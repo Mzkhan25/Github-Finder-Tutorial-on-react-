@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const name = "John Doe";
+    const showName = true;
+    const loading = false;
+    return (
+      <div className="App">
+        <h1>Hello from the other side, you will enjoy learning it.</h1>
+        {loading ? <h4>Loading...</h4> : <h1>Yo {showName ? name : null}</h1>}
+      </div>
+      // <Fragment>
+      //   <h1>Hello, i'm learning react</h1>
+      //   <h2>Good for you :P </h2>
+      // </Fragment>
+    );
+  }
 }
 
 export default App;
